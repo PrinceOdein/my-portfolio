@@ -1,7 +1,7 @@
 export default function ContactForm() {
   return (
     <form
-      action="https://formspree.io/f/YOUR_FORM_ID"
+      action="https://formspree.io/f/xzzgblrg"
       method="POST"
       class="space-y-4 max-w-md"
     >

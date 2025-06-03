@@ -1,5 +1,6 @@
 import { PageProps } from "$fresh/server.ts";
 import Projects from "../islands/Projects.tsx";
+import ContactForm from "../islands/ContactForm.tsx";
 
 export default function Home(props: PageProps) {
   return (
@@ -10,14 +11,10 @@ export default function Home(props: PageProps) {
 
        <Projects />
 
-        <div class="mt-10">
-  <h2 class="text-2xl font-semibold mb-2">Contact</h2>
-  <p>Find me on:</p>
-  <ul>
-    <li><a class="text-blue-500 underline" href="https://github.com/yourusername">GitHub</a></li>
-    <li><a class="text-blue-500 underline" href="https://linkedin.com/in/yourprofile">LinkedIn</a></li>
-  </ul>
-</div>
+       <div class="mt-10">
+        <h2 class="text-2xl font-semibold mb-2">Contact Me</h2>
+        <ContactForm />
+       </div>
 
     </div>
   );
