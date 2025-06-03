@@ -5,6 +5,7 @@
 import * as $_app from "./routes/_app.tsx";
 import * as $index from "./routes/index.tsx";
 import * as $ContactForm from "./islands/ContactForm.tsx";
+import * as $ProjectGallery from "./islands/ProjectGallery.tsx";
 import * as $Projects from "./islands/Projects.tsx";
 import * as $ThemeToggle from "./islands/ThemeToggle.tsx";
 import type { Manifest } from "$fresh/server.ts";
@@ -16,6 +17,7 @@ const manifest = {
   },
   islands: {
     "./islands/ContactForm.tsx": $ContactForm,
+    "./islands/ProjectGallery.tsx": $ProjectGallery,
     "./islands/Projects.tsx": $Projects,
     "./islands/ThemeToggle.tsx": $ThemeToggle,
   },
