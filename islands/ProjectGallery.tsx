@@ -1,11 +1,13 @@
 import { useState } from "preact/hooks";
 import { projects, Project } from "../data/projects.ts";
 import ProjectCard from "../components/ProjectCard.tsx";
+import ProjectModal from "./ProjectModal.tsx";
 
-const categories = ["all", "web", "design", "open-source"] as const;
+const categories = ["all", "web", "design", "open-source", "web3"] as const;
 
 export default function ProjectGallery() {
   const [selected, setSelected] = useState<typeof categories[number]>("all");
+  const [active, setActive] = useState<Project | null>(null);
 
   const filtered = selected === "all"
     ? projects
@@ -30,9 +32,12 @@ export default function ProjectGallery() {
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {filtered.map((project) => (
-          <ProjectCard project={project} />
+          <div onClick={() => setActive(project)} class="cursor-pointer">
+            <ProjectCard project={project} />
+          </div>
         ))}
       </div>
+      {active && <ProjectModal project={active} onClose={() => setActive(null)} />}
     </div>
   );
 }

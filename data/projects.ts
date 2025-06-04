@@ -2,7 +2,7 @@ export interface Project {
   title: string;
   description: string;
   image: string;
-  category: "web" | "design" | "open-source";
+  category: "web" | "design" | "web3" | "open-source";
   link: string;
 }
 
@@ -27,5 +27,12 @@ export const projects: Project[] = [
     image: "/images/open-source.png",
     category: "open-source",
     link: "#",
+  },
+  {
+    title: "Web3.0",
+    description: "built on blockchains",
+    image: "/images/web3.png",
+    category: "web3",
+    link: "#"
   },
 ];
