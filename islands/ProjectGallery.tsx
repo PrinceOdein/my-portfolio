@@ -2,6 +2,7 @@ import { useState } from "preact/hooks";
 import { projects, Project } from "../data/projects.ts";
 import ProjectCard from "../components/ProjectCard.tsx";
 import ProjectModal from "./ProjectModal.tsx";
+import FadeIn from "./FadeIn.tsx";
 
 const categories = ["all", "web", "design", "open-source", "web3"] as const;
 
@@ -32,9 +33,11 @@ export default function ProjectGallery() {
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {filtered.map((project) => (
-          <div onClick={() => setActive(project)} class="cursor-pointer">
+          <FadeIn>
+            <div onClick={() => setActive(project)} class="cursor-pointer">
             <ProjectCard project={project} />
           </div>
+          </FadeIn>
         ))}
       </div>
       {active && <ProjectModal project={active} onClose={() => setActive(null)} />}

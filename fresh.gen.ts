@@ -5,6 +5,7 @@
 import * as $_app from "./routes/_app.tsx";
 import * as $index from "./routes/index.tsx";
 import * as $ContactForm from "./islands/ContactForm.tsx";
+import * as $FadeIn from "./islands/FadeIn.tsx";
 import * as $ProjectGallery from "./islands/ProjectGallery.tsx";
 import * as $ProjectModal from "./islands/ProjectModal.tsx";
 import * as $Projects from "./islands/Projects.tsx";
@@ -18,6 +19,7 @@ const manifest = {
   },
   islands: {
     "./islands/ContactForm.tsx": $ContactForm,
+    "./islands/FadeIn.tsx": $FadeIn,
     "./islands/ProjectGallery.tsx": $ProjectGallery,
     "./islands/ProjectModal.tsx": $ProjectModal,
     "./islands/Projects.tsx": $Projects,
