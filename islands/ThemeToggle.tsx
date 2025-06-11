@@ -21,9 +21,10 @@ export default function ThemeToggle() {
   return (
     <button
       onClick={toggleTheme}
-      class="fixed top-4 right-4 bg-gray-200 dark:bg-gray-800 text-black dark:text-white px-3 py-1 rounded shadow transition"
+      class="fixed bottom-4 right-4 bg-gray-200 dark:bg-gray-800 text-black dark:text-white p-2 rounded-full shadow-lg opacity-40 hover:opacity-100 focus:opacity-100 transition md:opacity-100 z-50"
     >
-      {theme === "dark" ? "☀️ Light" : "🌙 Dark"}
+      {/* {theme === "dark" ? "☀️ Light" : "🌙 Dark"} */}
+      🌗
     </button>
   );
 }

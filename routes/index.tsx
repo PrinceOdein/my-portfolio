@@ -8,7 +8,7 @@ export default function Home() {
     <main class="p-4 md:p-8 max-w-4xl mx-auto space-y-12">
       <section id="intro" class="space-y-4">
         <h1 class="text-4xl font-bold">Hi, I'm Tamunodein</h1>
-        <p class="text-lg text-gray-700">
+        <p class="text-lg text-black-100">
           A web developer with 3+ years of experience building front-end experiences using SolidJS, Deno, and more.
         </p>
       </section>

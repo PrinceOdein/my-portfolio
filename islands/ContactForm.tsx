@@ -1,42 +1,38 @@
 export default function ContactForm() {
   return (
     <form
-      action="https://formspree.io/f/xzzgblrg"
-      method="POST"
-      class="space-y-4 max-w-md"
-    >
-      <div>
-        <label class="block mb-1 font-medium">Name</label>
-        <input
-          type="text"
-          name="name"
-          required
-          class="w-full border rounded px-3 py-2"
-        />
-      </div>
-      <div>
-        <label class="block mb-1 font-medium">Email</label>
-        <input
-          type="email"
-          name="_replyto"
-          required
-          class="w-full border rounded px-3 py-2"
-        />
-      </div>
-      <div>
-        <label class="block mb-1 font-medium">Message</label>
-        <textarea
-          name="message"
-          required
-          class="w-full border rounded px-3 py-2"
-        ></textarea>
-      </div>
-      <button
-        type="submit"
-        class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
-      >
-        Send
-      </button>
-    </form>
+  method="POST"
+  action="https://formspree.io/f/xzzbglrg"
+  class="space-y-4"
+>
+  <input
+    type="text"
+    name="name"
+    placeholder="Your Name"
+    required
+    class="w-full p-3 rounded bg-gray-100 dark:bg-gray-700 dark:text-white border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-400"
+  />
+  <input
+    type="email"
+    name="email"
+    placeholder="Your Email"
+    required
+    class="w-full p-3 rounded bg-gray-100 dark:bg-gray-700 dark:text-white border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-400"
+  />
+  <textarea
+    name="message"
+    placeholder="Your Message"
+    rows={5}
+    required
+    class="w-full p-3 rounded bg-gray-100 dark:bg-gray-700 dark:text-white border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-400"
+  ></textarea>
+  <button
+    type="submit"
+    class="bg-blue-600 md:hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded"
+  >
+    Send Message
+  </button>
+</form>
+
   );
 }
